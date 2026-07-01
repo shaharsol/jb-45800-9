@@ -8,7 +8,7 @@
 </head>
 <body>
     <p>contact us</p>
-    <form>
+    <form action="thanks.html">
         <input placeholder="name" id="name" value="Orit"/>
         <br /><span>birthdate:</span> <input />
         <br /><label for="phone">phone: </label><input id="phone"/>
@@ -41,6 +41,7 @@
         <input 
             id="eye-color" 
             type="color"
+            name="eye-color"
         />
 
         <!-- dates -->
@@ -73,6 +74,7 @@
         <input 
             id="password" 
             type="password"
+            name="password"
         />
 
         <br/><label for="message">message</label>
@@ -80,7 +82,7 @@
 
         <!-- selections -->
         <br/><label for="country">where do you live?</label>
-        <select id="country">
+        <select id="country" name="country">
             <option value="" disabled selected>please select country...</option>
             <option value="COG">Congo, Democratic republic of</option>
             <option value="LIB">Liberia</option>
@@ -97,7 +99,7 @@
 
         <!-- checkbox -->
         <br/>
-        <input type="checkbox" id="agree" />
+        <input type="checkbox" id="agree" name="agree"/>
         <label for="agree">i agree to the terms of use</label>
 
         <br/>
