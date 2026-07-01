@@ -81,9 +81,10 @@
         <!-- selections -->
         <br/><label for="country">where do you live?</label>
         <select id="country">
-            <option>Congo</option>
-            <option>Liberia</option>
-            <option>Ghana</option>
+            <option value="" disabled selected>please select country...</option>
+            <option value="COG">Congo, Democratic republic of</option>
+            <option value="LIB">Liberia</option>
+            <option value="GHN">Ghana</option>
         </select>
 
         <!-- multi selections -->
@@ -93,6 +94,16 @@
             <option>Boxing</option>
             <option>Football</option>
         </select>
+
+        <!-- checkbox -->
+        <br/>
+        <input type="checkbox" id="agree" />
+        <label for="agree">i agree to the terms of use</label>
+
+        <br/>
+        <input type="checkbox" id="newsletter" checked/>
+        <label for="newsletter">i want to recieve emails</label>
+        
 
     </form>
 </body>
