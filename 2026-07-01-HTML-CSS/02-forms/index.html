@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>contact us</p>
+    <form>
+        <input placeholder="name" id="name"/>
+        <br /><span>birthdate:</span> <input />
+        <br /><label for="phone">phone: </label><input id="phone"/>
+
+        <!-- input type text -->
+        <!-- if i dont explictly mention the input type
+        type will be text -->
+        <br/><input />
+        <br/><input type="text" />
+
+        <!-- type number -->
+        <br/><label for="age">age</label>
+        <input 
+            type="number" 
+            step="10" 
+            id="age" 
+            min="18" 
+            max="120"
+        />
+
+        <!-- type email -->
+        <br/><label for="email">email</label>
+        <input 
+            id="email" 
+            type="email"
+        />
+
+        <!-- type color -->
+        <br/><label for="eye-color">eye color</label>
+        <input 
+            id="eye-color" 
+            type="color"
+        />
+
+        <!-- dates -->
+        <br/><label for="birth-date">birth date</label>
+        <input 
+            id="birth-date" 
+            type="date"
+        />
+
+
+
+    </form>
+</body>
+</html>
