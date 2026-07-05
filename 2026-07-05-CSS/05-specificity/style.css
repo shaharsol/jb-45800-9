@@ -1,0 +1,43 @@
+/* basic cascading  */
+/* 
+h2 {
+    color: blue;
+}
+
+h2 {
+    color: red;
+} 
+*/
+
+/* intro to specificity: 
+longer hierarchies seem to matter more */
+ 
+li h2 {
+   color: blue; 
+}
+
+h2 {
+    color: red !important;
+} 
+
+
+/* apparently, longer hierarchy is not the most important factor */
+
+/* #myDiv h2 {
+    color: blue;
+}
+
+div > div > div > ul > li > h2 {
+    color: red;
+}  */
+
+/* id is apparently stronger then class */
+/* #myDiv h2 {
+    color: blue;
+}
+
+.myClass h2 {
+    color: red;
+} */
+
+
