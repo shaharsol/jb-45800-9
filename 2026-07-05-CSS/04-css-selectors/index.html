@@ -11,7 +11,7 @@
     <h2>selectors are sooooo awesome</h2>
 
     <label class="sunshine">a label</label>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, perspiciatis?</p>
+    <p>Lorem <span>ipsum</span> dolor sit amet consectetur, adipisicing elit. Odit, perspiciatis?</p>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, perspiciatis?</p>
     <p class="sunshine sunset">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, perspiciatis?</p>
     <p class="sunshine">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, perspiciatis?</p>
@@ -21,18 +21,24 @@
 
 
     <form>
-        <p>
-            <input type="text" />
-        </p>
-        <p>
-            <input type="number" />
-        </p>
-        <p>
-            <input type="number" min="10" />
-        </p>
-        <p>
-            <input type="submit" />
-        </p>
+        <div>
+            <div>
+                <p>
+                    <input type="text" />
+                </p>
+                <p>
+                    <input type="number" />
+                </p>
+                <p>
+                    <input type="number" min="10" />
+                </p>
+                <p>
+                    <input type="submit" />
+                </p>
+
+            </div>
+
+        </div>
 
     </form>
 
@@ -41,11 +47,48 @@
 
 
     <div id="my-div">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem <span>ipsum</span> dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
     </div>
+
+    <div id="my-div2">
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem <span>ipsum</span> dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+
+    <div id="my-div3">
+        <div>
+            <div>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div>Lorem <span>ipsum</span> dolor sit amet.</div>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="my-div3">
+        <div>
+            <div>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem <span>ipsum</span> dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

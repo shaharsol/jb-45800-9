@@ -20,6 +20,10 @@ a {
     color: green;
 }
 
+span {
+    color: salmon;
+}
+
 /* class selector */
 .sunshine {
     background-color: lightyellow;
@@ -68,3 +72,25 @@ p::first-letter {
     font-size: xx-large;
 }
 
+/* hierarchy of selectors */
+div span {
+    text-decoration: line-through;
+}
+
+#my-div2 span {
+    text-decoration: underline;    
+}
+
+div div div p span {
+    color: yellowgreen;
+}
+
+/* specific hierarchy of selectors */
+form > div > p > input[type=text]{
+    background-color: blueviolet;
+}
+
+/* combination of selectors */
+span, div p, #my-div3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
