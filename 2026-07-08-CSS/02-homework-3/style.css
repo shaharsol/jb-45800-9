@@ -1,0 +1,24 @@
+body {
+    background-color: aqua;
+}
+
+h1, .menu {
+    text-align: center;
+}
+
+.menu > a {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+#animals {
+    width: 700px;
+    border: 2px dashed purple;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#animals > img {
+    width: 200px;
+    margin: 12px;
+}
