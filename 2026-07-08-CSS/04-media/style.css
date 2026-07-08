@@ -1,0 +1,21 @@
+h1 {
+    color: red;
+    text-decoration: line-through;
+}
+
+p {
+    color: blue;
+    border: 1px solid purple;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        color: pink;
+        text-decoration: underline;
+    }
+
+    p {
+        color: green;
+        border: 3px dashed aqua;
+    }
+}
