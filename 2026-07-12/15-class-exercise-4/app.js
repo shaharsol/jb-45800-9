@@ -4,8 +4,13 @@ lastName = prompt('enter your last name')
 phone = prompt('enter your phone number') 
 email = prompt('enter your email') 
 
-result = "Full name: " + firstName + " " + lastName + "\nPhone: " + phone + "\nEmail: " + email
+// result = "Full name: " + firstName + " " + lastName + "\nPhone: " + phone + "\nEmail: " + email
 
-alert(result)
+// string embedding, string interpolation
+result2 = `Full Name: ${firstName} ${lastName}
+Phone: ${phone}
+Email: ${email}`   
+
+alert(result2)
 
 
