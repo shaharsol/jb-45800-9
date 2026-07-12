@@ -1,0 +1,1 @@
+prompt('enter a number') // the value that the user entered, hides here somewhere
