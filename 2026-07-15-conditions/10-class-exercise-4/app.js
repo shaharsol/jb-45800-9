@@ -1,13 +1,15 @@
-age = +prompt('enter your age')
+digit = prompt('enter a digit name')
 
-if (age > 120 || age < 0) {
-    alert('invalid age')
-} else if (age > 65 || age < 5) {
-    alert('enter free')
-} else if (age > 18) {
-    alert('adult pay 60 nis')
-} else if (age > 13) {
-    alert('youth, pay 50 nis')
+if (digit == 'one') {
+    alert(1)
+} else if (digit == 'two') {
+    alert(2)
+} else if (digit == 'three') {
+    alert(3)
+} else if (digit == 'four') {
+    alert(4)
+} else if (digit == 'five') {
+    alert(5)
 } else {
-    alert('kids price, pay 40')
+    alert('invalid')
 }
