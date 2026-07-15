@@ -7,9 +7,9 @@ email = prompt('enter your email')
 // result = "Full name: " + firstName + " " + lastName + "\nPhone: " + phone + "\nEmail: " + email
 
 // string embedding, string interpolation
-result2 = `Full Name: ${firstName} ${lastName}
+result2 = `Full Name: ${firstName} ${lastName}"
 Phone: ${phone}
-Email: ${email}`   
+Email: ${email}`
 
 alert(result2)
 
