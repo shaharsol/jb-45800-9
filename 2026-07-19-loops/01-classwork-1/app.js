@@ -18,11 +18,14 @@ number3 = +prompt('enter a 3rd number')
 // }
 
 // method2:
-if (number1 > number2 && number1 > number3) {
-    alert(`${number1} is max`)
-} else if (number2 > number1 && number2 > number3) {
-    alert(`${number2} is max`)
-} else {
-    alert(`${number3} is max`)
-}
+// if (number1 > number2 && number1 > number3) {
+//     alert(`${number1} is max`)
+// } else if (number2 > number1 && number2 > number3) {
+//     alert(`${number2} is max`)
+// } else {
+//     alert(`${number3} is max`)
+// }
+
+// composite ternary:
+alert(`${number1 > number2 && number1 > number3 ? number1 : (number2 > number1 && number2 > number3 ? number2 : number3)} is max`)
 
