@@ -27,7 +27,7 @@ numberOfIterations = 0
 // whether or not there will be a consecutive iteration
 while (numberOfIterations < 10) {
     numberOfIterations = numberOfIterations + 1
-    console.log(`${num + numberOfIterations}`)
+    console.log(`current value: ${num + numberOfIterations}`)
 }
 
 console.log('program ended')
