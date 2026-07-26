@@ -20,16 +20,6 @@ yossi = {
     } 
 }
 
-// the for-in loop is a special loop that enables
-// me to iterate over objects
-for (property in meni) {
-    console.log(property)
+for(property in yossi) {
+    console.log(`${property}: ${yossi[property]}`)
 }
-
-console.log('yossi starts here')
-
-for (property in yossi) {
-    console.log(property)
-}
-
-
