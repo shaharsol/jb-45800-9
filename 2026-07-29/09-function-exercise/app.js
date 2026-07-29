@@ -1,15 +1,17 @@
-// bad code
+function printCost(amount) {
+    console.log(`you pay $${amount}`)
+}
 
 const age = +prompt("enter your age")
 
 if (age < 6) {
-    console.log('you pay $0')
+    printCost(0)
 } else if (age < 12) {
-    console.log('you pay $5')
+    printCost(5)
 } else if (age < 18) {
-    console.log('you pay $10')
+    printCost(10)
 } else if (age < 65) {
-    console.log('you pay $20')
+    printCost(20)
 } else {
-    console.log('you pay $0')
+    printCost(0)
 }
