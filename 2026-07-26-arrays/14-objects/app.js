@@ -46,3 +46,8 @@ yossi = {
 
 console.log(yossi.address.zip)
 
+
+// p1 = 'address'
+// p2 = 'zip'
+// yossi[p1][p2]
+
