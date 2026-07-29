@@ -1,0 +1,31 @@
+<user>
+    <friends>
+        <friend>
+            <id>1</id>
+            <name>Alice</name>
+            <following>
+                <id>78</id>
+                <id>106</id>
+                <id>58</id>
+            </following>
+        </friend>
+        <friend>
+            <id>2</id>
+            <name>Bob</name>
+            <following>
+                <id>79</id>
+                <id>106</id>
+                <id>57</id>
+            </following>
+        </friend>
+        <friend>
+            <id>3</id>
+            <name>Diana</name>
+            <following>
+                <id>48</id>
+                <id>156</id>
+                <id>588</id>
+            </following>
+        </friend>
+    </friends>
+</user>
