@@ -8,5 +8,19 @@ function isPrimary(number) {
     }
     return result
 }
-const number = +prompt('enter a number')
-console.log(`${number} primacy is : ${isPrimary(number)}`)
+
+function isArrayPrimary(array) {
+    for (const number of array) {
+        if(!isPrimary(number)) return false
+    }
+    return true
+}
+
+const nonePrimary = [4, 6, 8, 10, 12]
+const oneNotPrimary = [7, 11, 14, 17, 19]
+const allPrimary = [7, 11, 13, 17, 19]
+
+console.log(`array primacy of ${nonePrimary} is ${isArrayPrimary(nonePrimary)}`)
+console.log(`array primacy of ${oneNotPrimary} is ${isArrayPrimary(oneNotPrimary)}`)
+console.log(`array primacy of ${allPrimary} is ${isArrayPrimary(allPrimary)}`)
+
