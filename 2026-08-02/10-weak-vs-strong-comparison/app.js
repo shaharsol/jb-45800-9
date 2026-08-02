@@ -55,3 +55,10 @@ const someFunc = getAbs // how many functions do i have now?
 console.log(someFunc == getAbs)
 console.log(someFunc === getAbs)
 
+// strong comparisons:
+// ===
+// !==
+// >==
+// <==
+// !==
+
