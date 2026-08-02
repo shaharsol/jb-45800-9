@@ -18,4 +18,4 @@ function getArrayMinMax(array) {
     }
 }
 
-console.log(getArrayMinMax([45000, -78, 96000000000, -200000000, 760]))
+console.log(getArrayMinMax(['dfgdfgdf', '-gdfgdfg', '960gdfgdf00000gdfg000', '-dfgdfg', 'dfgdgf']))
