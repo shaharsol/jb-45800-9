@@ -1,3 +1,5 @@
+// DRY - dont repeat yourself
+
 const firstName = prompt('enter your first name')
 const lastName = prompt('enter your last name')
 
