@@ -8,7 +8,5 @@ function manipulate() {
 function addStatus() {
     const status = prompt("enter status")
     const statusDiv = document.getElementById('status')
-    const newParagraph = document.createElement('p')
-    newParagraph.innerText = status
-    statusDiv.appendChild(newParagraph)
+    statusDiv.innerHTML = `<p>${status}</p>`
 }
