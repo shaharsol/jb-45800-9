@@ -48,6 +48,9 @@ console.log(trimmed)
 console.log(trimmed.length)
 
 
+const emptyString = ''
+
+
 
 
 
