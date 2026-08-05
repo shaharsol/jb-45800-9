@@ -7,10 +7,10 @@ function getArrayMinMax(array) {
         if (number < min) min = number
     }
 
-    // return {
-    //     max: max,
-    //     min: min
-    // }
+    return {
+        max: max,
+        min: min
+    }
 
     return {
         min,

@@ -60,5 +60,6 @@ console.log(someFunc === getAbs)
 // !==
 // >==
 // <==
-// !==
+// >
+// <
 

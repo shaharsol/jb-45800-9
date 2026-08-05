@@ -19,6 +19,11 @@ const someBoolean = true // boolean
 const someObject = {a: 1, b: 2} // object
 const someArray = [1, 2, 3, 4] // object
 
+// if something is an object (i.e. the array)
+// it means i can trun it to json
+// JSON.stringify(someArray)
+
+
 let someUndefined // undefined
 let someNull = null // object
 
