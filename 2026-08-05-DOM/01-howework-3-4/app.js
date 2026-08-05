@@ -12,37 +12,15 @@ function isLongEnough(password) {
     return password.length >= 6
 }
 
-function hasCapitalLetter(password) {
-    let isCapitalLetterPresent = false
+function includesCharOfFamily(password, familyOfChars) {
+    let isIncluded = false
     for (const char of password) {
-        if(upperCaseLetters.includes(char)) {
-            isCapitalLetterPresent = true
+        if(familyOfChars.includes(char)) {
+            isIncluded = true
             break
         }
     }
-    return isCapitalLetterPresent
-}
-
-function hasNumber(password) {
-    let isNumberPresent = false
-    for (const char of password) {
-        if(numbers.includes(char)) {
-            isNumberPresent = true
-            break
-        }
-    }
-    return isNumberPresent
-}
-
-function hasSpecialChar(password) {
-    let isSpecialChar = false
-    for (const char of password) {
-        if(specialChars.includes(char)) {
-            isSpecialChar = true
-            break
-        }
-    }
-    return isSpecialChar
+    return isIncluded
 }
 
 function hasLowerCaseLetter(password) {
@@ -62,10 +40,11 @@ function hasErrors() {
 }
 
 if (!isLongEnough(password)) addErrorMessage('password must be at least 6 characters')
-if (!hasCapitalLetter(password)) addErrorMessage('password must contain at least one capital letter')
 if (!hasLowerCaseLetter(password)) addErrorMessage('password must contain at least one lower case letter')
-if (!hasNumber(password)) addErrorMessage('password must contain at least one number')
-if (!hasSpecialChar(password)) addErrorMessage('password must contain at least one special character')
+
+if (!includesCharOfFamily(password, upperCaseLetters)) addErrorMessage('password must contain at least one capital letter')
+if (!includesCharOfFamily(password, numbers)) addErrorMessage('password must contain at least one number')
+if (!includesCharOfFamily(password, specialChars)) addErrorMessage('password must contain at least one special character')
 
 if (hasErrors()) displayAllErrors()    
 
