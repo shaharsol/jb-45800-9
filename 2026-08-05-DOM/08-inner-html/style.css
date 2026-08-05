@@ -1,0 +1,20 @@
+.red {
+    color: red;
+}
+
+p > span {
+    color: green;
+}
+
+.italic {
+    font-style: italic;
+}
+
+#status {
+    border: 1px dashed purple;
+}
+
+#status > p {
+    font-weight: 900;
+    font-size: xx-large;
+}
