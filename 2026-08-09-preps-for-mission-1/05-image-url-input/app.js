@@ -8,6 +8,7 @@ function addUser() {
     const cv = document.getElementById('cv').value
     const category = document.getElementById('category').value
     const color = document.getElementById('color').value
+    const pic = document.getElementById('pic').value
 
 
     const tableBody = document.getElementById('user-table-body')
@@ -19,6 +20,7 @@ function addUser() {
             <td>${email}</td>
             <td>${category}</td>
             <td>${cv}</td>
+            <td><img src="${pic}" /></td>
         </tr>
     `
 
