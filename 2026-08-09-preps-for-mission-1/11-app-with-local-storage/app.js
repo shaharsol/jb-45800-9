@@ -1,3 +1,50 @@
+// this is the convention to name a variable which stands as a logical constant
+const USERS_LOCAL_STORAGE_KEY = 'users'
+
+// read users from the localStorage
+function getUsers() {
+    // const users = localStorage.getItem(USERS_LOCAL_STORAGE_KEY)
+    // if (users) return JSON.parse(users)
+    // return []    
+    return JSON.parse(localStorage.getItem(USERS_LOCAL_STORAGE_KEY) || "[]")    
+}
+
+function saveUsers(users) {
+    localStorage.setItem(USERS_LOCAL_STORAGE_KEY, JSON.stringify(users))
+    syncToDom()
+}
+
+// will read from localstorage (SSOT) and sync to dom
+function syncToDom() {
+    const users = getUsers()
+    
+    const tableBody = document.getElementById('user-table-body')
+    let newRows = ''
+
+    for (user of users) {
+
+        newRows += `
+            <tr style="background-color: ${user.color};">
+                <td>${user.firstName}</td>
+                <td>${user.lastName}</td>
+                <td>${user.email}</td>
+                <td>${user.category}</td>
+                <td>${user.cv}</td>
+                <td><img src="${user.pic}" /></td>
+                <td><button class="delete-button" onclick="deleteRow()">Delete</button></td>
+            </tr>
+        `        
+    }
+
+    tableBody.innerHTML = newRows
+
+}
+
+// principals:
+// 1. each data operation begins with getUsers
+// 2. each data modification should be done on the returned json (SSOT) and then sent back to saveUsers
+
+
 function isCVcontainsEducation(cv) {
     return cv.includes('education')
 }
@@ -32,19 +79,17 @@ function addUser() {
         return
     }
 
-    const tableBody = document.getElementById('user-table-body')
-
-    tableBody.innerHTML += `
-        <tr style="background-color: ${color};">
-            <td>${firstName}</td>
-            <td>${lastName}</td>
-            <td>${email}</td>
-            <td>${category}</td>
-            <td>${cv}</td>
-            <td><img src="${pic}" /></td>
-            <td><button class="delete-button" onclick="deleteRow()">Delete</button></td>
-        </tr>
-    `
+    const users = getUsers()
+    users.push({
+        firstName,
+        lastName,
+        email,
+        cv,
+        category,
+        color,
+        pic
+    })
+    saveUsers(users)
 
     document.getElementById('user-form').reset()
     
