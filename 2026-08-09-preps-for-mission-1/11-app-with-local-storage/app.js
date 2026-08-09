@@ -20,20 +20,23 @@ function syncToDom() {
     
     const tableBody = document.getElementById('user-table-body')
     let newRows = ''
+    let rowNumber = 0;
 
     for (user of users) {
 
         newRows += `
-            <tr style="background-color: ${user.color};">
+            <tr id="tr-${rowNumber}" style="background-color: ${user.color};">
                 <td>${user.firstName}</td>
                 <td>${user.lastName}</td>
                 <td>${user.email}</td>
                 <td>${user.category}</td>
                 <td>${user.cv}</td>
                 <td><img src="${user.pic}" /></td>
-                <td><button class="delete-button" onclick="deleteRow()">Delete</button></td>
+                <td><button class="delete-button" onclick="deleteRow(${rowNumber})">Delete</button></td>
             </tr>
-        `        
+        `     
+        
+        rowNumber++
     }
 
     tableBody.innerHTML = newRows
@@ -54,8 +57,15 @@ function isFirstLetterCapital(str) {
     return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(firstLetter)
 }
 
-function deleteRow() {
-    event.target.parentElement.parentElement.remove()
+function deleteRow(rowNumber) {
+    const users = getUsers()
+    users.splice(rowNumber, 1)    
+    saveUsers(users)
+    
+}
+
+function resetForm() {
+    document.getElementById('user-form').reset()
 }
 
 function addUser() {
@@ -91,6 +101,8 @@ function addUser() {
     })
     saveUsers(users)
 
-    document.getElementById('user-form').reset()
+    resetForm()
     
 }
+
+syncToDom()
