@@ -58,10 +58,11 @@ function isFirstLetterCapital(str) {
 }
 
 function deleteRow(rowNumber) {
-    const users = getUsers()
-    users.splice(rowNumber, 1)    
-    saveUsers(users)
-    
+    if(confirm("are you sure u want to delete?")){
+        const users = getUsers()
+        users.splice(rowNumber, 1)    
+        saveUsers(users)
+    }
 }
 
 function resetForm() {
