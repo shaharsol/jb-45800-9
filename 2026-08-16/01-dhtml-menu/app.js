@@ -1,0 +1,8 @@
+function displayMenu() {
+    document.getElementById('menu').innerHTML = `
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+    `
+}
+
+displayMenu()
