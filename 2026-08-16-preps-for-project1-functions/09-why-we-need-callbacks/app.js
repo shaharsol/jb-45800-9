@@ -12,4 +12,9 @@ function filterPassingGrades(gradesArray) {
     return passingGrades
 }
 
+// implement this function: should return only the failing grades
+function filterFailingGrades(gradesArray) {
+
+}
+
 console.log(filterPassingGrades(grades))
