@@ -1,69 +1,57 @@
-const grades = [10, 90, 87, 65, 44, 88, 95]
 const students = [{
-    name: 'sasson',
+    firstName: 'sasson',
+    lastName: 'Cohen',
     country: 'USA',
     age: 40,
     gender: 'male'
 }, {
-    name: 'lavie',
+    firstName: 'lavie',
+    lastName: 'hefetz',
     country: 'France',
     age: 20,
     gender: 'male'
 
 }, {
-    name: 'Ruth',
+    firstName: 'Ruth',
+    lastName: 'Moav',
     country: 'Italy',
     age: 30,
     gender: 'female'
 
 }, {
-    name: 'Judith',
+    firstName: 'Judith',
+    lastName: 'Lauren',
     country: 'UK',
     age: 60,
     gender: 'female'
 
 }, {
-    name: 'Pierre',
+    firstName: 'Pierre',
+    lastName: 'Dechamp',
     country: 'France',
     age: 38,
     gender: 'male'
 
 }, {
-    name: 'Edith',
+    firstName: 'Edith',
+    lastName: 'Piaf',
     country: 'France',
     age: 70,
     gender: 'female'
 
 }]
 
-function filterArray(array, isIncludeItemInResult) {
-    let includedItems = []
+
+function mapArray(array, callback) {
+    const result = []
     for (const item of array) {
-        if (isIncludeItemInResult(item)) {
-            includedItems.push(item)
-        }
+        result.push(callback(item))
     }
-    return includedItems
+    return result
 }
 
-// lets filter grades above 40
-const gradesAboveForty = filterArray(grades, function isAboveForty(grade) { 
-    return grade > 40
+const mappedArray = mapArray(students, function getFullName(student) {
+    return {fullName: `${student.firstName} ${student.lastName}`}
 })
 
-console.log('gradesAboveForty', gradesAboveForty)
-
-// lets filter only students from France
-const studentsFromFrance = filterArray(students, function isFromFrance(student) { 
-    return student.country === 'France'
-})
-
-console.log('studentsFromFrance', studentsFromFrance)
-
-// lets filter only students from France, that are woman, and are aged above 30
-const studentsFromFranceWomanAbove30 = filterArray(students, function isFromFranceWomanAbove30(student) { 
-    return student.country === 'France' && student.age > 30 && student.gender === 'female'
-})
-
-console.log('studentsFromFranceWomanAbove30', studentsFromFranceWomanAbove30)
-
+console.log(mappedArray)
