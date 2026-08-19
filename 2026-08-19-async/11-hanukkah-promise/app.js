@@ -5,6 +5,7 @@
 // candles used in Hannukah
 // dont print garbage. provide a single answer and console log
 // it when you are ready
+// to take a callback and wrap a promise around it is called `promisification`
 const howManyCandlesPerDay = (dayNumber, callback) => {
     setTimeout(() => {
         callback(dayNumber + 1)
