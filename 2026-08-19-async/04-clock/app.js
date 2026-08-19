@@ -9,3 +9,11 @@ using this new information (new shit has come to light) draw a clock on the page
 const now = new Date() // <- this gives you a date object containing the current time
 
 */
+
+const updateClock = () => {
+    const now = (new Date()).toLocaleTimeString()
+    document.getElementById('clock').innerHTML = now
+}
+
+updateClock()
+setInterval(updateClock, 1000)
