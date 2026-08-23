@@ -1,11 +1,20 @@
 // Implement this function.
 // make sure it works by using it instead of lines 7-8
-const getData = async (url) => {}
+// this is the async/await version, which is quite long...
+// const getData = async url => {
+//     const response = await fetch(url)
+//     const json = await response.json()
+//     return json
+// }
 
+// this is the promise based version, which is a one liner
+const getData = url => fetch(url).then(response => response.json());
+
+// any JavaScript code that appears immediately before an IIFE,
+// must end in ;
 (async () => {
     try {
-        const response = await fetch('https://dummyjson.com/users')
-        const json = await response.json()
+        const json = await getData('https://dummyjson.com/users')
     
         const html = json.users.map(user => `
             <tr>
