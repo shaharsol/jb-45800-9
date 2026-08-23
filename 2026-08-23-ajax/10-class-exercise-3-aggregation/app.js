@@ -18,6 +18,15 @@ const getData = url => fetch(url).then(response => response.json());
 
         document.getElementById('users').innerHTML = html
 
+        // men
+        const men = users.filter(({gender}) => gender === 'male')
+        document.getElementById('average-men-weight').innerHTML = men.reduce((total, {weight}) => total + weight, 0) / men.length
+
+        // women
+        const women = users.filter(({gender}) => gender === 'female')
+        document.getElementById('average-women-weight').innerHTML = men.reduce((total, {weight}) => total + weight, 0) / women.length
+
+
         const sumWeight = users.reduce((total, { weight }) => total + weight, 0)
 
         document.getElementById('averageWeight').innerHTML = sumWeight / users.length
