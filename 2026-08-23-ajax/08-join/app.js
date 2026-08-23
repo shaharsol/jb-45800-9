@@ -13,7 +13,9 @@ const getData = url => fetch(url).then(response => response.json());
                 <td>${age}</td>
                 <td>${email}</td>
             </tr>
-        `).reduce((total, current) => `${total}${current}`, '')
+        `).join('')
+        // use the above join instead of the below reduce
+        // `).reduce((total, current) => `${total}${current}`, '')
 
         document.getElementById('users').innerHTML = html
 

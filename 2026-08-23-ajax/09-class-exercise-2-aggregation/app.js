@@ -1,6 +1,8 @@
 // present a table with 3 columns: full name, age, email
 // populate it will all the users from https://dummyjson.com/users
 
+// also, below the table present the average weight
+
 const getData = url => fetch(url).then(response => response.json());
 
 (async () => {
@@ -13,7 +15,9 @@ const getData = url => fetch(url).then(response => response.json());
                 <td>${age}</td>
                 <td>${email}</td>
             </tr>
-        `).reduce((total, current) => `${total}${current}`, '')
+        `).join('')
+        // use the above join instead of the below reduce
+        // `).reduce((total, current) => `${total}${current}`, '')
 
         document.getElementById('users').innerHTML = html
 
