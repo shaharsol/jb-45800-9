@@ -1,4 +1,6 @@
-const main = async () => {
+// this is called IIFE
+// Imediately Invoked Function Expression
+(async () => {
     try {
         const response = await fetch('https://dummyjson.com/users')
         const json = await response.json()
@@ -17,6 +19,5 @@ const main = async () => {
         console.log(e)
     }
 
-}
+})()
 
-main()
