@@ -16,11 +16,12 @@ const getData = url => fetch(url).then(response => response.json());
                 <td>${email}</td>
             </tr>
         `).join('')
-        // use the above join instead of the below reduce
-        // `).reduce((total, current) => `${total}${current}`, '')
 
         document.getElementById('users').innerHTML = html
 
+        const sumWeight = users.reduce((total, { weight }) => total + weight, 0)
+
+        document.getElementById('averageWeight').innerHTML = sumWeight / users.length
     } catch (e) {
         console.log(e)
     }
