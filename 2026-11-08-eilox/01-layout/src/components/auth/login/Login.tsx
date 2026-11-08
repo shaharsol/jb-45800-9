@@ -8,14 +8,14 @@ export default function Login() {
 
     const { register, handleSubmit } = useForm<Login>()
 
-    const { setJwt } = useContext(AuthContext)
+    const { saveJwt } = useContext(AuthContext)
 
     async function submit(login: Login) {
         // console.log(login)
         try {
             const { jwt } = await signin(login)
             console.log(jwt)
-            setJwt(jwt)
+            saveJwt(jwt)
         } catch (err) {
             alert(err)
         }
