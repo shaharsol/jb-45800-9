@@ -4,10 +4,14 @@ import Footer from '../footer/Footer'
 import Header from '../header/Header'
 import Main from '../main/Main'
 import './Layout.css'
+import Login from '../../auth/login/Login'
 
 export default function Layout() {
+
+
     return (
         <div className='Layout'>
+
             <header>
                 <Header />
             </header>
@@ -23,6 +27,7 @@ export default function Layout() {
             <footer>
                 <Footer />
             </footer>
+
         </div>
     )
 }
