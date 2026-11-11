@@ -26,6 +26,7 @@ const followingSlice = createSlice({
             state.following = action.payload
         },
         follow: (state, action: PayloadAction<User>) => {
+            console.log(`following ${action.payload.name}`)
             state.following.push(action.payload)
         },
         unfollow: (state, action: PayloadAction<{id: string}>) => {

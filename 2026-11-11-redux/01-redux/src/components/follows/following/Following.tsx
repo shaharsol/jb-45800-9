@@ -4,17 +4,26 @@ import type User from "../../../models/User"
 import { getFollowing } from "../../../services/following"
 import AuthContext from "../../auth/auth/AuthContext"
 import './Following.css'
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks"
+import { populate } from "../../../redux/following-slice"
 
 export default function Following () {
 
-    const [following, setFollowing] = useState<User[]>([])
+    // const [following, setFollowing] = useState<User[]>([])
+    const following = useAppSelector(state => state.followingSlice.following)
+    const dispatch = useAppDispatch()
 
     const { jwt } = useContext(AuthContext)
 
     useEffect(() => {
         (async () => {
-            const following = await getFollowing(jwt)
-            setFollowing(following)
+            try {
+                const following = await getFollowing(jwt)
+                dispatch(populate(following))
+                // setFollowing(following)
+            } catch (e) {
+                alert(e)
+            }
         })()
     }, [])
 
