@@ -29,3 +29,8 @@ SELECT  firstName,
         MONTH(hireDate) as hire_month
 FROM    employees;
 
+-- IF is also a very useful scalar function
+SELECT	name, 
+        price, 
+        IF(price < 20, 'cheap', 'expensive') as price_class
+FROM	products;
