@@ -24,5 +24,8 @@ SELECT  REPLACE(REPLACE(LCASE(name), ' ', '-'), "'", "") as slug
 FROM    products;
 
 -- from employees table, display each employee name with the year they were hired
-
+SELECT  firstName, 
+        YEAR(hireDate) as hire_year,
+        MONTH(hireDate) as hire_month
+FROM    employees;
 
