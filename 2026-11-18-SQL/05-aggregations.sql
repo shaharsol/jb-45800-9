@@ -71,5 +71,19 @@ GROUP BY    supplierId
 HAVING      average_price > 30
 ORDER BY    average_price DESC;
 
--- in order-details table, calculate the average quantity of an order
+-- in order-details table, calculate the average quantity of an order-detail
+SELECT AVG(quantity) from `order-details`;
 
+-- calculate the average quantity of a product order (use order-details table)
+SELECT      productId, 
+            AVG(quantity) AS average_quantity
+FROM        `order-details`
+GROUP BY    productId;
+
+-- calculate the average quantity of a product order (use order-details table)
+-- only where the average quanity > 20
+SELECT      productId, 
+            AVG(quantity) AS average_quantity
+FROM        `order-details`
+GROUP BY    productId
+HAVING      average_quantity > 20;
