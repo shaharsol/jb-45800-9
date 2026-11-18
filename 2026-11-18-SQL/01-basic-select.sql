@@ -35,3 +35,6 @@ SELECT  name,
         price AS net_price, 
         price * 1.18 AS price_including_vat -- this is also called a pseudo column
 FROM    products;
+
+-- 
+SELECT firstName, lastName FROM employees;
