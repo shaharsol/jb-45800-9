@@ -118,3 +118,10 @@ SELECT      p.name AS name,
 FROM        products AS p
 RIGHT JOIN   categories AS c
 ON          p.categoryId = c.id
+
+-- display all orders from USA
+
+-- display all products ordered from USA
+
+-- generate a list of suppliers and the number of their products 
+-- we sold in USA, ordered from the most popular to least popular
