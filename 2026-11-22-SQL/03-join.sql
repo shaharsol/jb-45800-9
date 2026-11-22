@@ -120,8 +120,54 @@ RIGHT JOIN   categories AS c
 ON          p.categoryId = c.id
 
 -- display all orders from USA
+SELECT  o.customerId AS customer_id,
+        o.address AS address,
+        c.name AS country
+FROM    orders AS o
+JOIN    countries as c
+ON      o.countryId = c.id
 
 -- display all products ordered from USA
+SELECT  p.id AS product_id,
+        p.name AS product,
+        o.orderDate AS orderDate,
+        o.address AS address
+FROM    products AS p
+JOIN    `order-details` AS od
+ON      p.id = od.productId
+JOIN    orders AS o
+ON      o.id = od.orderId
+JOIN    countries as c
+ON      c.id = o.countryId
+WHERE   c.name = 'USA' -- I do the filter in the WHERE
+
+SELECT  p.id AS product_id,
+        p.name AS product,
+        o.orderDate AS orderDate,
+        o.address AS address
+FROM    products AS p
+JOIN    `order-details` AS od
+ON      p.id = od.productId
+JOIN    orders AS o
+ON      o.id = od.orderId
+JOIN    countries as c
+ON      c.id = o.countryId
+AND     c.name = 'USA' -- I do the filter as part of a join condition
+
 
 -- generate a list of suppliers and the number of their products 
--- we sold in USA, ordered from the most popular to least popular
+-- we sold in USA, sorted from the most popular to least popular
+SELECT  s.companyName AS supplier,
+        sum(od.quantity) as total_products_shipped_to_USA
+FROM    products AS p
+JOIN    `order-details` AS od
+ON      p.id = od.productId
+JOIN    orders AS o
+ON      o.id = od.orderId
+JOIN    countries as c
+ON      c.id = o.countryId
+AND     c.name = 'USA'
+JOIN    suppliers as s
+ON      p.supplierId = s.id
+GROUP BY    s.id
+ORDER BY    total_products_shipped_to_USA DESC
