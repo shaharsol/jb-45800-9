@@ -1,0 +1,12 @@
+{
+  "name": "password-generator-shaharsol-froyke",
+  "version": "1.0.0",
+  "description": "a very easy to use password generator",
+  "main": "password-generator.js",
+  "author": "shahar",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "chance": "^1.1.13"
+  }
+}
